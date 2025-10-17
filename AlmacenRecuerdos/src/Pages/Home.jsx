@@ -2,7 +2,6 @@ import { useState } from 'react'
 import reactLogo from '../assets/react.svg'
 import viteLogo from '/vite.svg'
 import './Home.css'
-import Header from '../Components/Header'
 
 
 export default function Home() {
@@ -10,8 +9,7 @@ export default function Home() {
 
   return (
     <>
-    <Header />
-      <div>
+      <div className='home'>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>

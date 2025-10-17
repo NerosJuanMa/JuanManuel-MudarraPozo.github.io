@@ -1,21 +1,16 @@
 :root {
-  /* font-family: 'floral-espinoso'; */
-  font-family:  Arial, Helvetica, sans-serif;
-  line-height: 1;
-  font-weight: 600;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
 
   color-scheme: light dark;
-  color: var(--color-principal);
-  background-color: var(--color-sombra);
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --color-principal: rgb(150, 100, 200, 0.5);
-  --color-secundario: rgb(100, 100, 200, 0.5);
-  --color-fondo: rgb(200, 200, 200);
-  --color-sombra: rgb(0, 0, 50, 0.5);
 }
 
 a {
@@ -28,7 +23,7 @@ a:hover {
 }
 
 body {
-  margin: 10;
+  margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
@@ -37,7 +32,7 @@ body {
 
 h1 {
   font-size: 3.2em;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 button {

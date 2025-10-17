@@ -40,10 +40,3 @@
 .read-the-docs {
   color: #888;
 }
-
-@font-face {
-  font-family: 'floral-espinoso';
-  src: url('./assets/Fonts/floral-espinoso.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
