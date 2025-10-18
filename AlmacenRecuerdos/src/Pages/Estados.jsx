@@ -1,10 +1,10 @@
 
 
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
-import BotonAlerta from "../Components/BotonAlerta";
-import BotonColor from "../Components/BotonColor";
-import FormularioSimple from "../Components/FormularioSimple";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import BotonAlerta from "../components/BotonAlerta";
+import BotonColor from "../components/BotonColor";
+import FormularioSimple from "../components/FormularioSimple";
 
 import "./Estados.css";
 
