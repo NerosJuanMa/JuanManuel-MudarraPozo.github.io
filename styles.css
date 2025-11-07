@@ -333,7 +333,7 @@ footer { grid-area: footer; }
 
 /* Lista horizontal del menú */
 nav ul {
-    /*display:flex;                Elementos en línea horizontal */
+    display:flex;             /*   Elementos en línea horizontal */
     justify-content: center;     /* Centra horizontalmente */
     align-items: center;         /* Centra verticalmente */
     gap: 1rem;                  /* Espacio entre botones */
