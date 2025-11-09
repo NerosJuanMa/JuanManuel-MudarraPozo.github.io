@@ -121,9 +121,9 @@ nav a:hover { background: var(--sky-blue); color: var(--text-light); }
     background: var(--ice-blue);
     border:2px dashed var(--deep-blue);
     border-radius:10px;
-    padding:16px;
+    padding: 10px;
 }
-.sidebar h3 { color: var(--deep-blue); margin-bottom:0.5rem; }
+.sidebar h3 { color: var(--deep-blue); margin-bottom:0.2rem;}
 
 /* ============================================================
    7. SECCIONES Y TARJETAS
