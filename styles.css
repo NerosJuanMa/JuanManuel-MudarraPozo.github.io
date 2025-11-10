@@ -23,8 +23,8 @@
     --card-light: #ffffff;
     /* Fondos tarjetas y secciones */
 
-    --sombra-light: rgb(87, 3, 75, 10);
-    --sombra-dark: rgb(254, 5, 217,10);
+    --sombra-light: rgb(135, 237, 245);
+    --sombra-dark: rgb(254, 5, 217);
 
     /* Tipografías */
     --fuente-principal: 'Arial', sans-serif;
@@ -48,8 +48,8 @@ html.dark-mode {
     /* El texto general claro */
     --card-light: #141414;
     /* El fondo de tarjetas oscuro */
-    --sombra-light: rgb(254, 5, 217, 10);
-    --sombra-dark: rgb(87, 3, 75, 10);
+    --sombra-light: rgb(254, 5, 217);
+    --sombra-dark: rgb(135, 237, 245);
 }
 
 /* ============================================================
@@ -387,11 +387,28 @@ button[type="submit"]:hover {
     top: 5px;*/
     position: fixed;
     top: 85%;
-    right: 17%;
+    right: 16.5%;
+    background: var(--sombra-light);
+    font-weight: 600;
+    font-size: x-large;
+    border: 3px solid var(--sombra-dark);
 } 
+.irtop a {
+    border-radius: 8px;
+    background: var(--ice-blue);
+    color: var(--brand-pink);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+.irtopC a:hover {
+    background: var(--sombra-dark);
+    color: var(--sombra-light);
+}
 
 .irtop {
-    color: var(--brand-pink)
+    color: var(--brand-pink);
+    
 }
 
 /* ------ BOTÓN MODERNO ------ */
