@@ -36,3 +36,19 @@ const icon = modeToggle.querySelector('.icon');  
     });
     
 })(); // Asegúrate de que tu función IIFE esté correctamente cerrada si la usas
+
+//generar fecha actual
+// Obtener la fecha y hora actual
+        const fecha = new Date();
+
+        // Obtener el elemento span por su ID
+        const contenedorFecha = document.getElementById('fechaActual');
+        const contenedorFechah = document.getElementById('fechaActualh');
+        // Formatear la fecha para mostrarla según la configuración local del usuario
+        // 'es-ES' especifica el formato para España, puedes cambiarlo si necesitas otro.
+        // Las opciones { dateStyle: 'full' } dan un formato completo (ej: lunes, 10 de noviembre de 2025)
+        const fechaFormateada = fecha.toLocaleDateString('es-ES', { dateStyle: 'full' });
+
+        // Insertar la fecha formateada en el elemento HTML
+        contenedorFecha.textContent = fechaFormateada;
+        contenedorFechah.textContent = fechaFormateada;
