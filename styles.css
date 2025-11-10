@@ -618,7 +618,19 @@ footer a{
     color: var(--brand-pink);
     font-weight: 600;
 }
+footer .fecha{
+    /* color: var(--brand-pink); */
+    font-weight: 600;
+    text-align: center;
+}
+.fechaHead{
+    color: var(--brand-pink);
+    font-weight: 600;
+    font-weight: 600;
+    text-align: right;
+    margin: 20px;
 
+}
 /* ============================================================
    12. IMÁGENES Y GALERÍA
    ============================================================ */
