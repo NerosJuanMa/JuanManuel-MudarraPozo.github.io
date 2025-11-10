@@ -393,13 +393,17 @@ button[type="submit"]:hover {
     font-size: x-large;
     border: 3px solid var(--sombra-dark);
 } 
-.irtop a {
-    border-radius: 8px;
-    background: var(--ice-blue);
-    color: var(--brand-pink);
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.2s ease;
+.irtopC {
+    /* Reemplaza 'nombre-de-la-animacion' con 'pulse-grow' */
+    animation-name: pulse-grow;
+    /* Duración de un ciclo completo (ej. 3 segundos) */
+    animation-duration: 3s; 
+    /* Hace que la animación se repita indefinidamente */
+    animation-iteration-count: infinite; 
+    /* Suaviza la transición (ej. ease-in-out para empezar lento, acelerar y terminar lento) */
+    animation-timing-function: ease-in-out; 
+    /* Opcional: Para asegurar que el elemento se comporta como un bloque al aplicar transform */
+    display: block; 
 }
 .irtopC a:hover {
     background: var(--sombra-dark);
