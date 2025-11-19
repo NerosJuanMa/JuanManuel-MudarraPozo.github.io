@@ -415,12 +415,34 @@ button[type="submit"]:hover {
     
 }
 
-/* ------ BOTÓN MODERNO ------ */
+/* //AUDIO DE FONDO */
+    .audio-on{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 5px;
+    margin-right: 1px;
+    width: 20px;
+    height: 20px;
+    top: 5%;
+    right: 0.5%;
+    font-size: 1rem;
+    cursor: pointer; 
+    user-select:none; 
+    overflow-y: hidden;
+    }
+    .audio-off {
+        opacity: 0.5;
+    }
+
+
+/* ------ BOTÓN MODERNO DARK ------ */
 
 .mode-toggle {
     position: fixed;
     top: 1px;
-    right: 1px;
+    right: 0.5%;
     width: 25px;
     height: 25px;
     border-radius: 14px;
@@ -629,6 +651,7 @@ footer .fecha{
     font-weight: 600;
     text-align: right;
     margin: 20px;
+    padding-right: 20PX;
 
 }
 /* ============================================================
@@ -822,3 +845,4 @@ a:visited {
     overflow-y:hidden;
 }
 }
+
