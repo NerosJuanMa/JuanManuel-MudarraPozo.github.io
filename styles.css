@@ -58,14 +58,17 @@ html.dark-mode {
 * {
     
     box-sizing: border-box;
-    transition: background-color 0.4s ease, color 0.4s ease;
+    /* transition: background-color 0.4s ease, color 0.4s ease; */
     /* Asegura que no haya padding o margin que cause desbordamiento */
     margin: 0;
     padding: 0;
     /* La clave: Oculta cualquier contenido que se desborde horizontalmente */
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
+html, body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
 body {
     font-family: var(--fuente-principal);
     background: var(--bg-light);
@@ -74,30 +77,41 @@ body {
     font-family: var(--fuente-principal);
     /* Garantiza que el ancho máximo sea el del viewport */
     width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr;
+    grid-template-areas:
+        "header header header"
+        "nav nav NAV"
+        "main main aside"
+        "footer footer footer";
 
+    
 }/* Corrección Global para evitar el scroll horizontal */
 
-
+/* hmtl {
+    overflow-x: hidden;
+} */
 /* ============================================================
    3. LAYOUT PRINCIPAL
    ============================================================ */
 .layout {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 3fr 2fr 1fr;
     grid-template-areas:
         "header header header"
         "nav nav nav"
         "main main aside"
-        "footer footer footer";
+        "footer footer footer"; */
     gap: 5px;
+    width:100%;
 }
 
 header {
     grid-area: header;
-    padding: 1px;
+    /* padding: 1px; */
     /* border-style: groove; */
-    justify-content:center; 
-    align-items:center;
+    /* justify-content:center;  */
+    /* align-items:center; */
 }
 
 .nav {
@@ -107,6 +121,9 @@ header {
 main {
     grid-area: main;
     padding: 10px;
+    /* display: grid; */
+    /* grid-template-columns: 2fr 1fr; */
+    /* gap: 2rem; */
 }
 
 footer {
@@ -114,17 +131,23 @@ footer {
     padding: 1px;
 }
 
-.sidebar {
-    grid-area: aside;
+aside {
+    grid-area: aside; 
 }
+
+
 .iframe{
-    width:100%; 
-    height:1815px; 
-    /* height: 100% */
+    width: 100%;
+    min-height: 100vh;
+    /* width:90%; 
+    height:2090px;  */
+    /* height: 100%; */
     border:none; 
-    overflow-x:auto;
-    overflow-y:auto;
+    /* overflow-x:auto; */
+    /* overflow-y:auto; */
 }
+
+
 /* ============================================================
    4. HEADER
    ============================================================ */
@@ -132,12 +155,12 @@ footer {
     display: grid;
     grid-template-columns: 0.3fr 0.7fr;
     gap: 1px;
-    max-width: 100%;
+    /* max-width: 100%; */
     margin: 1%;
     /* place-items:center; */
     /* border-style: double; */
-    justify-content:center; align-items:center;
-    
+    /* justify-content:center; align-items:center; */
+   
 }
 
 .header__photo {
@@ -184,7 +207,7 @@ footer {
 .header__contact {
     margin-top: 8px;
     /* display: flex; */
-    /* gap: 10px; */
+    gap: 10px;
     /* flex-wrap: wrap; */
     align-items: center;
     font-size: 0.95rem;
@@ -219,7 +242,7 @@ footer {
     /* Reemplaza 'nombre-de-la-animacion' con 'pulse-grow' */
     animation-name: pulse-grow;
     /* Duración de un ciclo completo (ej. 3 segundos) */
-    animation-duration: 3s; 
+    animation-duration: 1.5s; 
     /* Hace que la animación se repita indefinidamente */
     animation-iteration-count: infinite; 
     /* Suaviza la transición (ej. ease-in-out para empezar lento, acelerar y terminar lento) */
@@ -246,8 +269,7 @@ nav ul {
     align-items: center;
     gap: 0.5rem;
     list-style: none;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;    
 }
 
 nav a {
@@ -272,14 +294,15 @@ nav a:hover {
 .sidebar {
     background: var(--ice-blue);
     border: 2px dashed var(--deep-blue);
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .sidebar h3 {
     color: var(--deep-blue);
     margin-bottom: 0.2rem;
 }
+.sidebar ul{margin-left:1rem; list-style:square;}
 
 /* ============================================================
    7. SECCIONES Y TARJETAS
@@ -377,6 +400,20 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background: var(--sky-blue);
 }
+/* FIXED ESPECIALES  */
+.fechaHead{
+    position: relative;
+    inset: 1rem 1rem 1rem -1rem;
+
+    color: var(--brand-pink);
+    font-weight: 600;
+    font-weight: 600;
+    text-align: right;
+    margin: 5px;
+    padding-right: 25PX;
+
+}
+
 
 /*/////// FLECHA SUBIR //////*/
 .irtopC {
@@ -386,7 +423,8 @@ button[type="submit"]:hover {
     /* position:sticky;
     top: 5px;*/
     position: fixed;
-    top: 85%;
+    top: 79%;
+    /* inset: auto 1rem 1rem auto; */
     right: 16.5%;
     background: var(--sombra-light);
     font-weight: 600;
@@ -425,12 +463,14 @@ button[type="submit"]:hover {
     margin-right: 1px;
     width: 20px;
     height: 20px;
-    top: 5%;
-    right: 0.5%;
+    inset: 3rem 1rem auto auto;
+    /* top: 5%;
+    right: 0.5%; */
     font-size: 1rem;
     cursor: pointer; 
     user-select:none; 
-    overflow-y: hidden;
+    /* overflow-y: hidden;
+    overflow-x: hidden; */
     }
     .audio-off {
         opacity: 0.5;
@@ -441,8 +481,9 @@ button[type="submit"]:hover {
 
 .mode-toggle {
     position: fixed;
-    top: 1px;
-    right: 0.5%;
+    inset: 1rem 1rem auto auto;
+    /* top: 1px;
+    right: 0.5%; */
     width: 25px;
     height: 25px;
     border-radius: 14px;
@@ -457,7 +498,8 @@ button[type="submit"]:hover {
     z-index: 9999;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     transition: transform 0.25s ease, background 0.3s ease;
-    overflow-y: hidden;
+    /* overflow-y: hidden;
+    overflow-x: hidden; */
 }
 
 .mode-toggle:hover {
@@ -645,15 +687,7 @@ footer .fecha{
     font-weight: 600;
     text-align: center;
 }
-.fechaHead{
-    color: var(--brand-pink);
-    font-weight: 600;
-    font-weight: 600;
-    text-align: right;
-    margin: 20px;
-    padding-right: 20PX;
 
-}
 /* ============================================================
    12. IMÁGENES Y GALERÍA
    ============================================================ */
@@ -754,7 +788,16 @@ a:visited {
 /* ============================================================
    15. RESPONSIVE DESIGN
    ============================================================ */
-@media (max-width:768px) {
+@media (max-width:780px) {
+    .layout {
+        grid-template-columns: 1fr;
+        grid-template-areas: "header" "nav" "main" "aside" "footer";
+    
+    }
+    .irtopC{
+        top: 79%;
+        right: 19%;
+    }
     .repaso-grid {
         grid-template-columns: 1fr;
     }
@@ -780,14 +823,13 @@ a:visited {
 }
 
 @media (max-width:576px) {
-   /* .breadcrumb-item + .breadcrumb-item::before { margin:0 0.25rem; font-size:.8rem; }
-    .breadcrumb { font-size:.8rem; padding:.5rem .75rem; } */
-    
+    /* .breadcrumb-item + .breadcrumb-item::before { margin:0 0.25rem; font-size:.8rem; }
+    .breadcrumb { font-size:.8rem; padding:.5rem .75rem; }
+     */
     .layout {
         grid-template-columns: 1fr;
         grid-template-areas: "header" "nav" "main" "aside" "footer";
-        
-        
+    
     }
     .header__inner {
         grid-template-columns: 1fr ;
@@ -830,19 +872,20 @@ a:visited {
         padding: 0 15px;
     }
     .irtopC {
-        
-        position: fixed;
-        top: 83%;
-        right: 1%;
+    position: fixed;
         background-color:var(--sky-blue2);
+        top: 79%;
+        right: 21%;
     } 
     .iframe{
-    width:100%; 
-    height: 1170px; 
+    width: 100%;
+    min-height: 100vh;
+    /* width:100%; 
+    height: 1255px;  */
     /* height: 100% */
     border:none; 
-    overflow-x:auto;
-    overflow-y:hidden;
+    /* overflow-x:auto;
+    overflow-y:hidden; */
 }
 }
 
