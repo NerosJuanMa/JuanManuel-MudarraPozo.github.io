@@ -52,3 +52,28 @@ const icon = modeToggle.querySelector('.icon');  
         // Insertar la fecha formateada en el elemento HTML
         contenedorFecha.textContent = fechaFormateada;
         contenedorFechah.textContent = fechaFormateada;
+
+
+
+//AUDIO FONDO PULSO CORAZON
+    const audio = document.getElementById("bg-audio");
+    const btn = document.getElementById("audio-btn");
+
+    btn.addEventListener("click", () => {
+        if (audio.muted) {
+            audio.muted = false;
+            btn.classList.remove("audio-off");
+            btn.textContent = "🔊";
+        } else {
+            audio.muted = true;
+            btn.classList.add("audio-off");
+            btn.textContent = "🔇";
+        }
+    });
+
+    window.addEventListener("click", function enableAudio() {
+    const audio = document.getElementById("bg-audio");
+    audio.muted = false;
+    audio.play();
+    window.removeEventListener("click", enableAudio);
+});
