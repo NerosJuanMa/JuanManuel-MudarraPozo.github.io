@@ -252,27 +252,4 @@
       }
     }
  
-    /* #audio-btn { */
-    /* position: fixed; */
-    /* padding: 5px 10px;
-    margin-right: 20px;
-    top: 0%;
-     */
-    /* right: 20px; */
-    /* font-size: 0.9rem; */
-    /* cursor: pointer; */
-    /* user-select:none; */
-    /* } */
-    .audio-on{
-    position: fixed;
-    padding: 5px 10px;
-    margin-right: 20px;
-    top: 0%;
-    right: 20px;
-    font-size: 0.9rem;
-    cursor: pointer; 
-    user-select:none; 
-    }
-    .audio-off {
-        opacity: 0.5;
-    }
+   
